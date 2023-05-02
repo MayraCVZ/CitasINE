@@ -78,7 +78,7 @@ CREATE TABLE documento
 	Constraint Fk_categoria foreign key (id_categoria) references categoria(id_categoria)
 )
 
-create table usuario(
+create table usuarios(
 	id_usuario int,
 	nombre varchar(100),
 	aPaterno varchar(150),
@@ -87,7 +87,7 @@ create table usuario(
 	telefono varchar(20),
 	tipo_telefono varchar(20),
 	correo_e  varchar(50),
-	obervacion varchar(100),
+	observacion varchar(250),
 	residencia varchar(50),
 	constraint pk_usuario primary key (id_usuario)
 )
@@ -100,7 +100,7 @@ create table detalle_cita(
 	id_documento2 int,
 	id_documento3 int,
 	constraint fk_detalle_cita_1 foreign key (id_usuario)
-	references usuario (id_usuario),
+	references usuarios (id_usuario),
 	constraint fk_detalle_cita_2 foreign key (id_tramite)
 	references tramite (id_tramite),
 	constraint fk_detalle_cita_3 foreign key (id_documento1)
@@ -120,7 +120,7 @@ drop table categoria
 drop table documento
 drop table tramite
 drop table paises
-drop table usuario*/
+drop table usuarios*/
 
 /*select * from detalle_cita
 select * from citas

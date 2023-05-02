@@ -479,5 +479,3 @@ insert into tramite values (5, 'Reemplazo por vigencia')
 insert into tramite values (6, 'Reincorporación')
 insert into tramite values (7, 'Reposición')
 insert into tramite values (8, 'Reimpresión')
-
-select * from tramite
